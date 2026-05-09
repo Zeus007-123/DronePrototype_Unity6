@@ -13,7 +13,9 @@ public class PlayerController : MonoBehaviour
 
     [Header("Rotation")]
     [SerializeField] private float tiltAmount = 20f;
+    [SerializeField] private float pitchAmount = 10f;
     [SerializeField] private float rotationSmoothness = 5f;
+    [SerializeField] private float yawRotationSpeed = 5f;
 
     [Header("Hover")]
     [SerializeField] private float hoverAmplitude = 0.15f;
@@ -114,22 +116,41 @@ public class PlayerController : MonoBehaviour
 
     private void HandleRotation()
     {
+        Vector3 flatVelocity =
+            new Vector3(
+                velocity.x,
+                0f,
+                velocity.z
+            );
+
+        if (flatVelocity.sqrMagnitude > 0.1f)
+        {
+            Quaternion lookRotation =
+                Quaternion.LookRotation(flatVelocity.normalized);
+
+            transform.rotation = Quaternion.Lerp(
+                transform.rotation,
+                lookRotation,
+                yawRotationSpeed * Time.deltaTime
+            );
+        }
+
         float horizontalTilt =
             -moveInput.x * tiltAmount;
 
         float forwardTilt =
-            moveInput.y * -10f;
+            moveInput.y * -pitchAmount;
 
-        Quaternion targetRotation =
+        Quaternion tiltRotation =
             Quaternion.Euler(
                 forwardTilt,
-                0f,
+                transform.eulerAngles.y,
                 horizontalTilt
             );
 
         transform.rotation = Quaternion.Lerp(
             transform.rotation,
-            targetRotation,
+            tiltRotation,
             rotationSmoothness * Time.deltaTime
         );
     }
