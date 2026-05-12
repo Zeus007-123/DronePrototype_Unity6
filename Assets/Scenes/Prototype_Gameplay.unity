@@ -273,7 +273,7 @@ GameObject:
   - component: {fileID: 117186352}
   - component: {fileID: 117186351}
   - component: {fileID: 117186350}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MediumBuilding (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -385,7 +385,7 @@ GameObject:
   - component: {fileID: 167189819}
   - component: {fileID: 167189818}
   - component: {fileID: 167189817}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LargeTower (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -497,7 +497,7 @@ GameObject:
   - component: {fileID: 175194376}
   - component: {fileID: 175194375}
   - component: {fileID: 175194374}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LargeTower (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -609,7 +609,7 @@ GameObject:
   - component: {fileID: 296346140}
   - component: {fileID: 296346139}
   - component: {fileID: 296346138}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MediumBuilding (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -721,7 +721,7 @@ GameObject:
   - component: {fileID: 308198799}
   - component: {fileID: 308198798}
   - component: {fileID: 308198797}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LargeTower (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -833,7 +833,7 @@ GameObject:
   - component: {fileID: 328999527}
   - component: {fileID: 328999526}
   - component: {fileID: 328999525}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MediumBuilding (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -945,7 +945,7 @@ GameObject:
   - component: {fileID: 335602991}
   - component: {fileID: 335602990}
   - component: {fileID: 335602989}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LargeTower (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1064,7 +1064,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &344759143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1080,6 +1080,9 @@ MonoBehaviour:
   playerController: {fileID: 1570448370}
   velocityText: {fileID: 1293390790}
   heightText: {fileID: 561811660}
+  proximityText: {fileID: 1563790727}
+  warningPanel: {fileID: 607493054}
+  warningThreshold: 4
 --- !u!114 &344759144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1157,6 +1160,7 @@ RectTransform:
   m_Children:
   - {fileID: 1293390792}
   - {fileID: 561811663}
+  - {fileID: 607493056}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1176,7 +1180,7 @@ GameObject:
   - component: {fileID: 351922146}
   - component: {fileID: 351922145}
   - component: {fileID: 351922144}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LargeTower (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1288,7 +1292,7 @@ GameObject:
   - component: {fileID: 391695772}
   - component: {fileID: 391695771}
   - component: {fileID: 391695770}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LargeTower (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1400,7 +1404,7 @@ GameObject:
   - component: {fileID: 549764433}
   - component: {fileID: 549764432}
   - component: {fileID: 549764431}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LargeTower (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1494,7 +1498,7 @@ Transform:
   m_GameObject: {fileID: 549764430}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40.6, y: 2.12, z: 98.3}
+  m_LocalPosition: {x: 40.6, y: 2.12, z: 91.1}
   m_LocalScale: {x: 6, y: 20, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1538,7 +1542,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'HEIGHT:'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -1604,7 +1608,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -278.5077, w: -61.59375}
+  m_margin: {x: -223.48218, y: 0, z: -278.5077, w: -61.59375}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1791,7 +1795,7 @@ GameObject:
   - component: {fileID: 582631576}
   - component: {fileID: 582631575}
   - component: {fileID: 582631574}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SmallBuilding (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1903,7 +1907,7 @@ GameObject:
   - component: {fileID: 603024421}
   - component: {fileID: 603024420}
   - component: {fileID: 603024419}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LargeTower (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2003,6 +2007,95 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &607493053
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 607493056}
+  - component: {fileID: 607493055}
+  - component: {fileID: 607493054}
+  - component: {fileID: 607493057}
+  m_Layer: 5
+  m_Name: WarningPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &607493054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607493053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.4113207, g: 0.4113207, b: 0.4113207, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &607493055
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607493053}
+  m_CullTransparentMesh: 1
+--- !u!224 &607493056
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607493053}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1563790725}
+  m_Father: {fileID: 344759147}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &607493057
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607493053}
+  m_Enabled: 1
+  m_Alpha: 0.05
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &682143676
 GameObject:
   m_ObjectHideFlags: 0
@@ -2015,7 +2108,7 @@ GameObject:
   - component: {fileID: 682143679}
   - component: {fileID: 682143678}
   - component: {fileID: 682143677}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LargeTower (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2109,7 +2202,7 @@ Transform:
   m_GameObject: {fileID: 682143676}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.25, y: 2.12, z: 114.6}
+  m_LocalPosition: {x: -9.4, y: 2.12, z: 95}
   m_LocalScale: {x: 6, y: 20, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2127,7 +2220,7 @@ GameObject:
   - component: {fileID: 703538234}
   - component: {fileID: 703538233}
   - component: {fileID: 703538232}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LargeTower (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2239,7 +2332,7 @@ GameObject:
   - component: {fileID: 718087044}
   - component: {fileID: 718087043}
   - component: {fileID: 718087042}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MediumBuilding (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2351,7 +2444,7 @@ GameObject:
   - component: {fileID: 732349024}
   - component: {fileID: 732349023}
   - component: {fileID: 732349022}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LargeTower (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2445,7 +2538,7 @@ Transform:
   m_GameObject: {fileID: 732349021}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 93.4, y: 2.12, z: 115}
+  m_LocalPosition: {x: 93.4, y: 2.12, z: 92.7}
   m_LocalScale: {x: 6, y: 20, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2463,7 +2556,7 @@ GameObject:
   - component: {fileID: 736899986}
   - component: {fileID: 736899985}
   - component: {fileID: 736899984}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SmallBuilding (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2626,7 +2719,7 @@ GameObject:
   - component: {fileID: 777831688}
   - component: {fileID: 777831687}
   - component: {fileID: 777831686}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MediumBuilding (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2738,7 +2831,7 @@ GameObject:
   - component: {fileID: 785955252}
   - component: {fileID: 785955251}
   - component: {fileID: 785955250}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SmallBuilding (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2850,7 +2943,7 @@ GameObject:
   - component: {fileID: 820083602}
   - component: {fileID: 820083601}
   - component: {fileID: 820083600}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MediumBuilding (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3041,7 +3134,7 @@ GameObject:
   - component: {fileID: 872289794}
   - component: {fileID: 872289793}
   - component: {fileID: 872289792}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LargeTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3153,7 +3246,7 @@ GameObject:
   - component: {fileID: 891318650}
   - component: {fileID: 891318649}
   - component: {fileID: 891318648}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MediumBuilding (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3265,7 +3358,7 @@ GameObject:
   - component: {fileID: 1042459097}
   - component: {fileID: 1042459096}
   - component: {fileID: 1042459095}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SmallBuilding (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3377,7 +3470,7 @@ GameObject:
   - component: {fileID: 1064562582}
   - component: {fileID: 1064562581}
   - component: {fileID: 1064562580}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SmallBuilding
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3598,7 +3691,7 @@ GameObject:
   - component: {fileID: 1141572096}
   - component: {fileID: 1141572095}
   - component: {fileID: 1141572094}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SmallBuilding (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3710,7 +3803,7 @@ GameObject:
   - component: {fileID: 1166146881}
   - component: {fileID: 1166146880}
   - component: {fileID: 1166146879}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SmallBuilding (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3822,7 +3915,7 @@ GameObject:
   - component: {fileID: 1167904499}
   - component: {fileID: 1167904498}
   - component: {fileID: 1167904497}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LargeTower (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3934,7 +4027,7 @@ GameObject:
   - component: {fileID: 1184780416}
   - component: {fileID: 1184780415}
   - component: {fileID: 1184780414}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LargeTower (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4028,7 +4121,7 @@ Transform:
   m_GameObject: {fileID: 1184780413}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 79, y: 2.12, z: 114.6}
+  m_LocalPosition: {x: 73.9, y: 2.12, z: 94.3}
   m_LocalScale: {x: 6, y: 20, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4046,7 +4139,7 @@ GameObject:
   - component: {fileID: 1205725880}
   - component: {fileID: 1205725879}
   - component: {fileID: 1205725878}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MediumBuilding (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4158,7 +4251,7 @@ GameObject:
   - component: {fileID: 1286494289}
   - component: {fileID: 1286494288}
   - component: {fileID: 1286494287}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MediumBuilding (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4296,7 +4389,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'VELOCITY:'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -4362,7 +4455,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -278.5077, w: -61.59375}
+  m_margin: {x: 0, y: 0, z: -491.0877, w: -61.59375}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4407,7 +4500,7 @@ GameObject:
   - component: {fileID: 1343132794}
   - component: {fileID: 1343132793}
   - component: {fileID: 1343132792}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MediumBuilding (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4519,7 +4612,7 @@ GameObject:
   - component: {fileID: 1428520275}
   - component: {fileID: 1428520274}
   - component: {fileID: 1428520273}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MediumBuilding (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4631,7 +4724,7 @@ GameObject:
   - component: {fileID: 1445759628}
   - component: {fileID: 1445759627}
   - component: {fileID: 1445759626}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MediumBuilding
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4743,7 +4836,7 @@ GameObject:
   - component: {fileID: 1485882444}
   - component: {fileID: 1485882443}
   - component: {fileID: 1485882442}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LargeTower (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4843,6 +4936,143 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1563790724
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1563790725}
+  - component: {fileID: 1563790726}
+  - component: {fileID: 1563790727}
+  m_Layer: 5
+  m_Name: ProximityText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1563790725
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563790724}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 607493056}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -495}
+  m_SizeDelta: {x: 0, y: -990}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1563790726
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563790724}
+  m_CullTransparentMesh: 1
+--- !u!114 &1563790727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563790724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
+  m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190335
+  m_fontColor: {r: 1, g: 0, b: 0, a: 0.19607843}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 3
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1001 &1570448369
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4894,6 +5124,10 @@ PrefabInstance:
     - target: {fileID: 3449360346663503852, guid: c6f4a6d1f3b2a29439c5651d1060bcdb, type: 3}
       propertyPath: rotationSmoothness
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449360346663503852, guid: c6f4a6d1f3b2a29439c5651d1060bcdb, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 8184781522784684972, guid: c6f4a6d1f3b2a29439c5651d1060bcdb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4981,7 +5215,7 @@ GameObject:
   - component: {fileID: 1586948634}
   - component: {fileID: 1586948633}
   - component: {fileID: 1586948632}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SmallBuilding (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5093,7 +5327,7 @@ GameObject:
   - component: {fileID: 1637338923}
   - component: {fileID: 1637338922}
   - component: {fileID: 1637338921}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LargeTower (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5318,7 +5552,7 @@ GameObject:
   - component: {fileID: 1660010291}
   - component: {fileID: 1660010290}
   - component: {fileID: 1660010289}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MediumBuilding (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5430,7 +5664,7 @@ GameObject:
   - component: {fileID: 1753138221}
   - component: {fileID: 1753138220}
   - component: {fileID: 1753138219}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SmallBuilding (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5542,7 +5776,7 @@ GameObject:
   - component: {fileID: 1753249348}
   - component: {fileID: 1753249347}
   - component: {fileID: 1753249346}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SmallBuilding (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5654,7 +5888,7 @@ GameObject:
   - component: {fileID: 1838296392}
   - component: {fileID: 1838296391}
   - component: {fileID: 1838296390}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MediumBuilding (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5748,7 +5982,7 @@ Transform:
   m_GameObject: {fileID: 1838296389}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.85, y: 2.12, z: 29.86}
+  m_LocalPosition: {x: -12.6, y: 2.12, z: 33.97}
   m_LocalScale: {x: 4, y: 10, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5766,7 +6000,7 @@ GameObject:
   - component: {fileID: 1839476509}
   - component: {fileID: 1839476508}
   - component: {fileID: 1839476507}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LargeTower (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5878,7 +6112,7 @@ GameObject:
   - component: {fileID: 1854338415}
   - component: {fileID: 1854338414}
   - component: {fileID: 1854338413}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MediumBuilding (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5990,7 +6224,7 @@ GameObject:
   - component: {fileID: 1863896410}
   - component: {fileID: 1863896409}
   - component: {fileID: 1863896408}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MediumBuilding (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6107,7 +6341,7 @@ GameObject:
   - component: {fileID: 1968276493}
   - component: {fileID: 1968276492}
   - component: {fileID: 1968276491}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SmallBuilding (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6219,7 +6453,7 @@ GameObject:
   - component: {fileID: 1984013114}
   - component: {fileID: 1984013113}
   - component: {fileID: 1984013112}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SmallBuilding (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6428,7 +6662,7 @@ GameObject:
   - component: {fileID: 1998183185}
   - component: {fileID: 1998183184}
   - component: {fileID: 1998183183}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LargeTower (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6522,7 +6756,7 @@ Transform:
   m_GameObject: {fileID: 1998183182}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: 2.12, z: 98.67}
+  m_LocalPosition: {x: 10, y: 2.12, z: 93.3}
   m_LocalScale: {x: 6, y: 20, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6540,7 +6774,7 @@ GameObject:
   - component: {fileID: 2007525434}
   - component: {fileID: 2007525433}
   - component: {fileID: 2007525432}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MediumBuilding (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6652,7 +6886,7 @@ GameObject:
   - component: {fileID: 2016862740}
   - component: {fileID: 2016862739}
   - component: {fileID: 2016862738}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LargeTower (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6764,7 +6998,7 @@ GameObject:
   - component: {fileID: 2069392104}
   - component: {fileID: 2069392103}
   - component: {fileID: 2069392102}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LargeTower (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6876,7 +7110,7 @@ GameObject:
   - component: {fileID: 2131763232}
   - component: {fileID: 2131763231}
   - component: {fileID: 2131763230}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LargeTower (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

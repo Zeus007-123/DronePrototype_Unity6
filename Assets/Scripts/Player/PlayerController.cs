@@ -27,19 +27,18 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float minHeight = 2f;
     [SerializeField] private float maxHeight = 20f;
 
-    [Header("Shooting")]
-    [SerializeField] private GameObject projectilePrefab;
-    [SerializeField] private Transform firePoint;
-    [SerializeField] private float fireRate = 0.2f;
+    [Header("Collision Detection")]
+    [SerializeField] private float sensorRange = 10f;
+    [SerializeField] private LayerMask obstacleLayer;
+    public float proximityDistance;
 
-    private Vector3 velocity;
-    private float nextFireTime;
+    public Vector3 velocity;
 
     private DroneControls controls;
 
     private Vector2 moveInput;
+    public Vector3 pos;
     private float heightInput;
-    private bool shootPressed;
 
     private void Awake()
     {
@@ -62,11 +61,7 @@ public class PlayerController : MonoBehaviour
         controls.Player.Height.canceled += ctx =>
             heightInput = 0f;
 
-        controls.Player.Shoot.performed += ctx =>
-            shootPressed = true;
-
-        controls.Player.Shoot.canceled += ctx =>
-            shootPressed = false;
+        
     }
 
     private void OnDisable()
@@ -79,7 +74,8 @@ public class PlayerController : MonoBehaviour
         HandleMovement();
         HandleRotation();
         HandleHover();
-        HandleShooting();
+        CollisionDetection();
+        //HandleShooting();
     }
 
     private void HandleMovement()
@@ -103,7 +99,7 @@ public class PlayerController : MonoBehaviour
         transform.position +=
             Vector3.up * heightInput * verticalSpeed * Time.deltaTime;
 
-        Vector3 pos = transform.position;
+        pos = transform.position;
 
         pos.x = Mathf.Clamp(pos.x, -horizontalLimit, horizontalLimit);
 
@@ -167,18 +163,21 @@ public class PlayerController : MonoBehaviour
         transform.position = hoverPos;
     }
 
-    private void HandleShooting()
+    private void CollisionDetection()
     {
-        if (shootPressed &&
-            Time.time >= nextFireTime)
-        {
-            nextFireTime = Time.time + fireRate;
+        RaycastHit hit;
+        Vector3 direction = transform.forward;
+        float sphereRadius = 2.0f;
 
-            Instantiate(
-                projectilePrefab,
-                firePoint.position,
-                firePoint.rotation
-            );
+        if(Physics.SphereCast(transform.position, sphereRadius, direction, out hit, sensorRange, obstacleLayer)) 
+        {
+            proximityDistance = hit.distance;
+        }
+        else
+        {
+            proximityDistance = -1;
         }
     }
+
+    
 }
